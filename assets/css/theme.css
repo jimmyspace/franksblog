@@ -1,0 +1,52 @@
+#app.dark {
+  --body-bg: #000;
+  --theme-black: #fff;
+  --theme-logo-rotate: hue-rotate(180deg) brightness(300%) grayscale(100%);
+  --primary-color: #fff;
+  --primary-color-lighter: rgba(255, 255, 255, 0.8);
+  --primary-color-translucent: rgba(255, 255, 255, 0.5);
+  --module-bg: rgba(68, 68, 68, 0.6);
+  --module-bg-opaque: #444444;
+  --module-bg-lighter: rgba(68, 68, 68, 0.8);
+  --module-bg-translucent: rgba(68, 68, 68, 0.5);
+  --module-bg-darker-1: #2d2d2d;
+  --module-bg-darker-2: #232323;
+  --module-bg-darker-3: #141414;
+  --module-bg-darker-4: #070707;
+  --module-bg-darker-5: black;
+  --text-reversal: rgba(68, 68, 68, 0.9);
+  --link-color: rgba(255, 255, 255, 0.92);
+  --link-hover: #fff;
+  --text-color: #f0f0f0;
+  --text-lighter: lighter(#f0f0f0, 20%);
+  --text-darker: #bdbdbd;
+  --text-secondary: rgba(240, 240, 240, 0.5);
+  --text-disabled: rgba(240, 240, 240, 0.38);
+  --text-divider: rgba(240, 240, 240, 0.26);
+}
+#app.light {
+  --body-bg: #e3e3e3;
+  --theme-black: #000;
+  --theme-logo-rotate: none;
+  --primary-color: #0088f5;
+  --primary-color-lighter: rgba(0, 136, 245, 0.8);
+  --primary-color-translucent: rgba(0, 136, 245, 0.5);
+  --module-bg: rgba(255, 255, 255, 0.6);
+  --module-bg-opaque: white;
+  --module-bg-lighter: rgba(255, 255, 255, 0.8);
+  --module-bg-translucent: rgba(255, 255, 255, 0.5);
+  --module-bg-darker-1: #e8e8e8;
+  --module-bg-darker-2: #dedede;
+  --module-bg-darker-3: #cfcfcf;
+  --module-bg-darker-4: #c2c2c2;
+  --module-bg-darker-5: #b5b5b5;
+  --text-reversal: rgba(255, 255, 255, 0.9);
+  --link-color: rgba(0, 0, 0, 0.74);
+  --link-hover: rgba(0, 0, 0, 0.86);
+  --text-color: rgba(0, 0, 0, 0.68);
+  --text-lighter: lighter(rgba(0, 0, 0, 0.68), 20%);
+  --text-darker: rgba(0, 0, 0, 0.68);
+  --text-secondary: rgba(0, 0, 0, 0.5);
+  --text-disabled: rgba(0, 0, 0, 0.38);
+  --text-divider: rgba(0, 0, 0, 0.26);
+}
