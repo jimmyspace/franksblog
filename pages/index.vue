@@ -8,6 +8,14 @@
 
 export default {
   components: {
+  },
+  methods: {
+    doRequest() {
+      this.$axios.get('/api/code?type=android');
+    }
+  },
+  mounted(){
+    this.doRequest();
   }
 }
 </script>

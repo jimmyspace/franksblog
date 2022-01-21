@@ -41,6 +41,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
   /*
   ** Build configuration
@@ -51,5 +52,8 @@ module.exports = {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js' }
+  ]
 }
