@@ -13,12 +13,12 @@ export default {
     Articles
   },
   async asyncData({ store }){
-    await store.dispatch('getCooks');
+    await store.dispatch('getCodes');
     return
   },
   computed: {
     articles(){
-      return this.$store.state.cooks
+      return this.$store.state.codes
     }
   },
   methods: {

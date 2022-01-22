@@ -2,7 +2,7 @@
     <div class="fb-nav">
         <ul class="nav-ul">
             <li class="nav-li">
-                <router-link :to="{ path: '/cook'}">{{$t('nav.cook')}}</router-link>
+                <router-link :to="{ path: '/'}">{{$t('nav.cook')}}</router-link>
             </li>
             <li class="nav-li">
                 <router-link :to="{ path: '/code'}">{{$t('nav.code')}}</router-link>

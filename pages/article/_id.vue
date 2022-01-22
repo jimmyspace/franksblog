@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="page-content">
-      <articles :dataList="articles"></articles>
+      文章详情
+      {{details}}
     </div>
   </div>
 </template>
@@ -12,13 +13,13 @@ export default {
   components: {
     Articles
   },
-  async asyncData({ store }){
-    await store.dispatch('getCooks');
+  async asyncData({ store, route }){
+    await store.dispatch('getDetails', route.params.id);
     return
   },
   computed: {
-    articles(){
-      return this.$store.state.cooks
+    details(){
+      return this.$store.state.details
     }
   },
   methods: {
