@@ -22,6 +22,7 @@ export default {
     height: 272px;
     border-radius: 4px;
     background-color: var(--module-bg);
+    z-index: 9;
     .plan-bg{
         height: 100%;
         width: 100%;
