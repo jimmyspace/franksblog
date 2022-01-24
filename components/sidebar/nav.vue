@@ -25,7 +25,7 @@ export default {
 
 <style lang="less" scoped>
 .fb-nav{
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: 50%;
     margin-left: -525px;
@@ -48,7 +48,7 @@ export default {
                 will-change: background-color;
                 letter-spacing: .5px;
                 font-size: 14px;
-                &:hover{
+                &:hover, &.nuxt-link-exact-active{
                     color: var(--primary-color);
                     background-color: var(--module-bg-lighter);
                     transition: background-color .06s;
