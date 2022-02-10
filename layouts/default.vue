@@ -1,9 +1,14 @@
 <template>
-  <div id="app" :class="theme">
-    <desktop-header></desktop-header>
-    <nav-bar></nav-bar>
+  <div id="app" :class="[theme, device]">
+    <template v-if="device === 'desktop'">
+      <desktop-header></desktop-header>
+      <nav-bar></nav-bar>
+    </template>
+    <template v-if="device === 'mobile'">
+      <mobile-header></mobile-header>
+    </template>
     <nuxt />
-    <plan></plan>
+    <plan  v-if="device === 'desktop'"></plan>
     <desktop-footer></desktop-footer>
   </div>
 </template>
@@ -12,8 +17,10 @@ import DesktopHeader from '~/components/header/desktopHeader.vue';
 import DesktopFooter from '~/components/footer/desktopFooter.vue';
 import NavBar from '~/components/sidebar/nav.vue';
 import Plan from '~/components/sidebar/plan.vue';
+import MobileHeader from '../components/header/mobileHeader.vue';
 export default {
   components: {
+    MobileHeader,
     DesktopHeader,
     DesktopFooter,
     NavBar,
@@ -21,7 +28,13 @@ export default {
   },
   computed: {
     theme(){
-      return this.$store.state.theme
+      return this.$store.state.theme;
+    },
+    device(){
+      return this.$store.state.device;
+    },
+    showMobileNav() {
+        return this.$store.state.showMobileNav
     }
   }
 }
@@ -59,6 +72,19 @@ export default {
     padding-top: 20px;
     width: 600px;
     z-index: 3;
+  }
+}
+.mobile{
+  .container{
+    padding: 60px 10px 0;
+    .page-content{
+      position: relative;
+      left: 0;
+      margin: 0 auto 20px;
+      padding-top: 10px;
+      width: 100%;
+      z-index: 3;
+    }
   }
 }
 

@@ -15,6 +15,7 @@ const store = () => new Vuex.Store({
     codes: [],//代码列表
     lifes: [],//生活列表
     details: {},//文章详情
+    showMobileNav: false,//是否展示手机端侧边栏
   },
   mutations: {
 
@@ -94,7 +95,17 @@ const store = () => new Vuex.Store({
      */
     change_details(state, payload){
       state.details = payload
-    }
+    },
+
+    /**
+     *
+     * 改变侧边栏展开合上
+     * @param {*} state
+     * @param {*} payload
+     */
+    change_showMobileNav(state, payload){
+      state.showMobileNav = payload
+    },
   },
   actions: {
 
