@@ -51,7 +51,8 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
+    },
+    // publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.iloveyu.online/_nuxt/' : '/_nuxt/' // nuxt默认的
   },
   serverMiddleware: [
     { path: '/api', handler: '~/api/index.js' }
