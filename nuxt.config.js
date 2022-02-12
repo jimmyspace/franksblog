@@ -43,6 +43,10 @@ module.exports = {
   modules: [
     '@nuxtjs/axios'
   ],
+  axios: {
+    baseURL: '', // Used as fallback if no runtime config is provided
+  },
+
   /*
   ** Build configuration
   */
