@@ -45,7 +45,7 @@ module.exports = {
   ],
   axios: {
     //baseURL: 'http://192.168.5.28:3000', // Used as fallback if no runtime config is provided
-    proxy: process.env.NODE_ENV !== 'production' ? true : false
+    proxy: process.env.NODE_ENV === 'production' ? true : false
   },
 
   proxy: {
