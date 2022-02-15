@@ -10,5 +10,8 @@
         "cook": "cook",
         "life": "life",
         "up": "up"
+    },
+    "plan": {
+        "title": "DAY DAY UP"
     }
 }
