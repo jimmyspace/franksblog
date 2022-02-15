@@ -2,7 +2,10 @@
     <div class="fb-header">
         <div class="fb-header-wrapper">
             <div class="fb-home-link">
-                <div class="fb-logo">Frank</div>
+                <div class="fb-logo">
+                    <img v-show="theme === 'light'" src="@/static/logo-blank-w.png" alt="">
+                    <img v-show="theme === 'dark'" src="@/static/logo-white-w.png" alt="">
+                </div>
                 <div class="fb-describe">{{$t('header.title')}}</div>
             </div>
             <div class="fb-head-actions">
@@ -60,9 +63,14 @@ export default {
             align-items: center;
             color: var(--link-color);
             .fb-logo{
-                width: 80px;
+                width: 130px;
+                height: 31px;
+                padding: 5px 0;
                 font-size: 16px;
                 font-weight: bold;
+                img{
+                    width: 100px;
+                }
             }
             .fb-describe{
             }

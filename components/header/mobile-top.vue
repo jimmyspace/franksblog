@@ -4,7 +4,10 @@
           <img v-show="theme === 'dark'" src="@/static/menu-icon-white.png" alt="">
           <img v-show="theme === 'light'" src="@/static/menu-icon.png" alt="">
       </div>
-      <div class="fb-top-title">Frankblogs</div>
+      <div class="fb-top-title">
+          <img v-show="theme === 'light'" src="@/static/logo-blank-w.png" alt="">
+          <img v-show="theme === 'dark'" src="@/static/logo-white-w.png" alt="">
+      </div>
   </div>
 </template>
 
@@ -47,11 +50,17 @@ export default {
         }
     }
     .fb-top-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 100%;
         line-height: 30px;
         text-align: center;
         padding: 15px 0;
+        img{
+            width: 100px;
+        }
     }
 }
 </style>
